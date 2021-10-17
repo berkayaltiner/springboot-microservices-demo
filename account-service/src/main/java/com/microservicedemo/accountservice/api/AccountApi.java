@@ -22,6 +22,7 @@ public class AccountApi {
     public ResponseEntity<List<Account>> getAll() {
         return ResponseEntity.ok(accountService.getAll());
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Account> get(@PathVariable("id") String id){
         return ResponseEntity.ok(accountService.get(id));
